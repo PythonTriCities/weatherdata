@@ -30,3 +30,21 @@ print(target)
 print(headers)
 r = requests.get(target, headers=headers)
 print(r)
+print(r.text)
+
+if r.status_code == 200:
+    obj = xmltodict.parse(r.text)
+else:
+    print('Response code is {}'.format(r))
+
+print(json.dumps(obj, indent=4))
+
+# Remove the # below to uncomment the and see what each one does
+
+#print(obj['response'])
+#print()
+#print(obj['response']['data'])
+#print()
+#print(obj['response']['data']['METAR'])
+#print()
+#print(obj['response']['data']['METAR']['station_id'])
