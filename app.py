@@ -39,11 +39,14 @@ if r.status_code == 200:
 else:
     print('Response code is {}'.format(r))
 
-#print(json.dumps(obj, indent=4, sort_keys=True))
-#print(obj['response']['data']['METAR']['observation_time'])
+print(json.dumps(obj, indent=4))
+
+# Remove the # below to uncomment the and see what each one does
+#
+#print(obj['response'])
+#print()
+#print(obj['response']['data'])
+#print()
+#print(obj['response']['data']['METAR'])
+#print()
 #print(obj['response']['data']['METAR']['station_id'])
-#print(obj['response']['data']['METAR']['temp_c'])
-
-for key, value in obj['response']['data']['METAR'].items():
-    print(key, value)
-
