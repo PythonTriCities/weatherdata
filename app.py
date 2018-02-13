@@ -28,6 +28,9 @@ headers = {
        'Chrome/52.0.2743.82 Safari/537.36')
        }
 
+def get_value_from_object_with_key(obj, key):
+    return obj['response']['data']['METAR'][key]
+
 #print(target)
 #print(headers)
 r = requests.get(target, headers=headers)
@@ -44,6 +47,5 @@ else:
 #print(obj['response']['data']['METAR']['station_id'])
 #print(obj['response']['data']['METAR']['temp_c'])
 
-for key, value in obj['response']['data']['METAR'].items():
-    print(key, value)
-
+result = get_value_from_object_with_key(obj, 'temp_c')
+print('The result is {}'.format(result))
