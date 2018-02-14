@@ -76,7 +76,7 @@ Python 3.6.4
 6. Now checkout the branch named one, and view the code with your editor, when ready run app.py script
 ```
 git checkout one
-python first.py
+python app.py
 ```
 * Work your way through all 4 examples by checking out the other branches two, three and four:
 ```
