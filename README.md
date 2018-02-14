@@ -56,10 +56,12 @@ source ./.venv/bin/activate
 ```
 c:\path\to\myenv\Scripts\activate.bat
 ```
+ 
+
  * and then for both Linux/Mac and Windows import the requirements file
 ```
 pip install -r requirements
-'''
+```
 
 5. Test that it is not legacy Python, ie 2.7
 
