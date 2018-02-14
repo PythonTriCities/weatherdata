@@ -60,7 +60,7 @@ c:\path\to\myenv\Scripts\activate.bat
 
  * and then for both Linux/Mac and Windows import the requirements file
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 5. Test that it is not legacy Python, ie 2.7
@@ -76,7 +76,7 @@ Python 3.6.4
 6. Now checkout the branch named one, and view the code with your editor, when ready run app.py script
 ```
 git checkout one
-python first.py
+python app.py
 ```
 * Work your way through all 4 examples by checking out the other branches two, three and four:
 ```
