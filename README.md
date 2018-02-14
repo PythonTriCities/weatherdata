@@ -1,6 +1,6 @@
 # PythonTriCities demo weatherdata.
 
-This is a simple demo to demonstrate how the request library works
+This is a fun demo to demonstrate how the request library works and get some live weather data
 
 ### Prerequisites
 
@@ -56,6 +56,10 @@ source ./.venv/bin/activate
 ```
 c:\path\to\myenv\Scripts\activate.bat
 ```
+ * and then for both Linux/Mac and Windows import the requirements file
+```
+pip install -r requirements
+'''
 
 5. Test that it is not legacy Python, ie 2.7
 
@@ -67,14 +71,21 @@ python --version
 Python 3.6.4
 ```
 
-6. Now from the starthere folder run the first.py script
+6. Now checkout the branch named one, and view the code with your editor, when ready run app.py script
 ```
+git checkout one
 python first.py
 ```
-* If all went well you should see:
+* Work your way through all 4 examples by checking out the other branches two, three and four:
 ```
-Please type in a name: 
+git checkout two
+git checkout three
+git checkout four
 ```
+ * each time you can run the program with
+ ```
+ python app.py
+ ```
 
 ## Running the tests
 
