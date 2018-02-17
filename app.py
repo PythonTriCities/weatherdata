@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 import requests
+import json
+import xmltodict
 
 dsource = 'metars'
 station = 'KPSC'
