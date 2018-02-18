@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import requests
+import xmltodict
 
 dsource = 'metars'
 station = 'KPSC'
@@ -22,11 +23,24 @@ target = (
 headers = {
        'User-Agent':
        ('Mozilla/5.0 (X11; Linux x86_64)'
-       'AppleWebKit/537.36 (KHTML, like Gecko)'
-       'Chrome/52.0.2743.82 Safari/537.36')
+        'AppleWebKit/537.36 (KHTML, like Gecko)'
+        'Chrome/52.0.2743.82 Safari/537.36')
        }
 
-print(target)
-print(headers)
 r = requests.get(target, headers=headers)
-print(r)
+
+
+def get_value_from_object_with_key(obj, key):
+
+    return obj['response']['data']['METAR'][key]
+
+
+r = requests.get(target, headers=headers)
+
+if r.status_code == 200:
+    obj = xmltodict.parse(r.text)
+else:
+    print('Response code is {}'.format(r))
+
+result = get_value_from_object_with_key(obj, 'temp_c')
+print('The temp is {} celsius'.format(result))
