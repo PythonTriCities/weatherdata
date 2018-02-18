@@ -24,8 +24,8 @@ target = (
 headers = {
        'User-Agent':
        ('Mozilla/5.0 (X11; Linux x86_64)'
-       'AppleWebKit/537.36 (KHTML, like Gecko)'
-       'Chrome/52.0.2743.82 Safari/537.36')
+        'AppleWebKit/537.36 (KHTML, like Gecko)'
+        'Chrome/52.0.2743.82 Safari/537.36')
        }
 
 print(target)
@@ -43,10 +43,10 @@ print(json.dumps(obj, indent=4))
 
 # Remove the # below to uncomment the and see what each one does
 
-#print(obj['response'])
-#print()
-#print(obj['response']['data'])
-#print()
-#print(obj['response']['data']['METAR'])
-#print()
-#print(obj['response']['data']['METAR']['station_id'])
+# print(obj['response'])
+# print()
+# print(obj['response']['data'])
+# print()
+# print(obj['response']['data']['METAR'])
+# print()
+# print(obj['response']['data']['METAR']['station_id'])
