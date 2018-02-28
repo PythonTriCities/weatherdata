@@ -43,4 +43,5 @@ else:
     print('Response code is {}'.format(r))
 
 result = get_value_from_object_with_key(obj, 'temp_c')
-print('The temp is {} celsius'.format(result))
+print('The temp is {} celsius, '
+      'which is {} fahrenheit'.format(result, (float(result) * (9/5) + 32)))
