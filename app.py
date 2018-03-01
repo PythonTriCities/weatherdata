@@ -27,8 +27,6 @@ headers = {
         'Chrome/52.0.2743.82 Safari/537.36')
        }
 
-r = requests.get(target, headers=headers)
-
 
 def get_value_from_object_with_key(obj, key):
 
